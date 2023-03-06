@@ -1,0 +1,86 @@
+#include <stdio.h>   
+#include <stdlib.h> 
+#include<string.h>
+ int main()  
+{  
+
+    float number1,number2,result;
+    char choice;
+    int ch; 
+    do
+   {
+   system("cls");
+   
+	        printf("\n__________________________CALCULATOR________________________\n\n\n");
+	        
+	        printf ("\n Enter First Number:");  
+            scanf (" %f", &number1);  
+            printf (" Enter Second Number: ");  
+            scanf (" %f", &number2);
+            
+	        printf("Enter the operation you want to do:\n\n");
+	        
+            printf("Enter 1 for addition.\n");
+            printf("Enter 2 for subtraction.\n"); 
+            printf("Enter 3 for multiplication.\n");   
+	        printf("Enter 4 for division.\n");
+            printf("Enter 5 for exit.\n\n");
+            
+            scanf("%d",&ch);
+        
+		      
+    switch (ch)  
+    {  
+        case 1:  
+             
+            result = number1 + number2; 
+            printf (" Addition of two numbers is: %.2f", result);  
+             break; 
+              
+        case 2:
+            
+            result = number1 - number2;  
+            printf (" Subtraction of two numbers is: %.2f", result);  
+            break; 
+              
+        case 3:  
+              
+            result = number1 * number2;
+            printf (" Multiplication of two numbers is: %.2f", result);  
+            break;
+    
+        case 4: 
+            
+            if (number2 == 0)  
+                {  
+                    printf (" \n Divisor cannot be zero. Please enter another value ");  
+                    scanf ("%f", &number2);        
+                }  
+            result = number1 / number2; 
+            printf (" Division of two numbers is: %.2f", result);  
+            break;
+			   
+          
+        case 5:    
+        
+            exit(0);   
+               
+     
+        default:  
+        
+            printf(" Something is wrong!! ");  
+                               
+    
+}
+
+    printf (" \n \n__________________________________________________________________\n \n");   
+	
+	printf("Do you want to perform other caclulation ? \n");
+	
+	scanf("%s",&choice);
+}
+     while(choice == 'y');
+     
+return 0; 
+
+}
